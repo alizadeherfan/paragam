@@ -17,3 +17,5 @@ class Income(models.Model):
     date = models.DateTimeField()
     amount = models.BigIntegerField()
     user = models.ForeignKey(User)
+    def __unicode__(self):
+        return "{}-{}".format(self.date, self.amount)
